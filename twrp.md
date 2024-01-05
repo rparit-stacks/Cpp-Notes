@@ -190,4 +190,76 @@ public:
 };
 ```
 
-Yeh concepts aapko C++ mein classes aur objects ke sath kaam karne mein madadgar honge.
+**Constructors & Destructors:**
+
+**Introduction to Constructor and Destructor:**
+- **Constructor:** Constructor ek special member function hota hai jo object banate waqt automatically call hota hai. Constructor ka kaam hota hai object ke members ko initialize karna.
+- **Destructor:** Destructor bhi ek special member function hota hai, lekin yeh object destroy (memory deallocate) hone par automatically call hota hai. Destructor ka kaam hota hai resources, jaise ki memory, release karna.
+
+**Parameterized Constructor:**
+Parameterized constructor ek constructor hota hai jisko parameters ke sath define kiya jata hai. Isse aap object banate waqt values ko pass kar sakte hain. Example:
+
+```cpp
+class Rectangle {
+private:
+    int length;
+    int width;
+
+public:
+    Rectangle(int l, int w) {
+        length = l;
+        width = w;
+    }
+};
+```
+
+**Constructor with Default Arguments:**
+Constructor ko default arguments ke sath define kiya ja sakta hai. Isse constructor ko bina arguments ke bhi call kiya ja sakta hai. Example:
+
+```cpp
+class Circle {
+private:
+    double radius;
+
+public:
+    Circle(double r = 1.0) {
+        radius = r;
+    }
+};
+```
+
+**Multiple Constructors in a Class:**
+Aap ek class mein multiple constructors define kar sakte hain, lekin unke parameters alag hone chahiye (function overloading ka concept). Example:
+
+```cpp
+class Employee {
+private:
+    int empId;
+
+public:
+    Employee() {
+        empId = 0;
+    }
+
+    Employee(int id) {
+        empId = id;
+    }
+};
+```
+
+**Copy Constructor:**
+Copy constructor ek special constructor hota hai jo ek object se dusra object banane ke liye use hota hai. Yeh ek existing object ke data ko copy karke naya object banata hai. Example:
+
+```cpp
+class Book {
+private:
+    string title;
+
+public:
+    Book(const Book& otherBook) {
+        title = otherBook.title;
+    }
+};
+```
+
+Constructors aur destructors C++ mein class ke objects ke creation aur destruction ke process ko control karne mein madad karte hain.
