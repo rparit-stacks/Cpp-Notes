@@ -42,3 +42,38 @@
 | Memory Management       | Manual (malloc, free) | Automatic (new, delete) |
 
 Upar di gayi table mein C aur C++ ke beech ke kuch mukhya antar dikhaye gaye hain. C++, object-oriented features ke saath aata hai, jo code reusability aur flexibility mein sudhar kar deta hai, jabki C procedural programming ka ek udaharan hai jismein objects aur classes ka istemal nahi hota.
+
+
+Mujhe khed hai, aapko details me chahiye. Chaliye main har ek point ko aur vistar se samjhata hoon:
+
+**Stream-based I/O (Input/Output):**
+C++ mein stream-based I/O ka use karke aap asaani se input aur output handle kar sakte hain. `cin` stream se aap user se input le sakte hain aur `cout` stream se aap output display kar sakte hain. Ismein `>>` operator ka use input ke liye hota hai aur `<<` operator ka use output ke liye hota hai.
+
+**Literals - Constant Qualifiers:**
+C++ mein literals, constants ko represent karne ke liye hote hain. For example, aap `int` data type mein `5` ko literal constant ke roop mein use kar sakte hain. Constant qualifiers jaise `const` ka use kiya jata hai taki aap specify kar sakein ki koi value change nahi ho sakti.
+
+**Operators in C++:**
+C++ mein kai tarah ke operators hote hain jo various operations ko perform karte hain. Arithmetic operators (like `+`, `-`, `*`, `/`), comparison operators (like `==`, `!=`, `<`, `>`), assignment operators (like `=`, `+=`, `-=`, `*=`), logical operators (like `&&`, `||`), aadi.
+
+**Reference Variable:**
+Reference variable ek variable ko dusre variable ka alias banata hai. Isse aap ek variable ko dusre variable ke naam se access kar sakte hain. Reference variable ko declare karte waqt `&` symbol ka use kiya jata hai.
+
+**Functions - Default Arguments:**
+C++ mein aap functions ke parameters ko default values assign kar sakte hain. Isse function call karte waqt agar koi value nahi di jati to default value use hoti hai. Ye feature function definition ke dauran provide kiya jata hai.
+
+**Parameter Passing by Value, Reference, and Pointer:**
+Function mein parameters ko kisi bhi tarike se pass kiya ja sakta hai. Parameter passing by value, reference, aur pointer ke tino tarike hote hain. Value se pass karne par original data modify nahi hota, reference se pass karne par original data modify ho sakta hai, aur pointer se pass karne par address ke through original data modify ho sakta hai.
+
+**Inline Functions:**
+Inline functions compile-time optimization ke liye hoti hain. Yeh functions compiler ko suggestion deti hain ki unko function call ke bajaye wahi code insert karna chahiye jahan function call hota hai. Isse function call ki overhead kam hoti hai.
+
+**Type Conversion:**
+Type conversion, ya casting, ka use data type ko ek se dusre mein convert karne ke liye hota hai. C++ mein implicit (automatic) type conversion hoti hai, jaise ki `int` se `float` mein. Explicit (manual) type conversion bhi kiya ja sakta hai, jahan aap specifically data type ko cast karte hain.
+
+**Basic C++ Programs:**
+Basic C++ programs mein aap "Hello World" jaise simple programs likh sakte hain. Ismein aap user se input le sakte hain, use process karke output generate kar sakte hain, ya fir arithmetic calculations kar sakte hain.
+
+**New and Delete Operators - Dynamic Memory Allocation for Arrays:**
+`new` operator ka use dynamic memory allocation ke liye hota hai. Isse aap heap memory mein nayi memory allocate kar sakte hain. `delete` operator ka use dynamically allocated memory ko deallocate karne ke liye hota hai. Arrays ke liye `new[]` aur `delete[]` operators ka use kiya jata hai.
+
+Yeh concepts C++ programming language ke fundamental concepts hain aur inko samajhna C++ programming mein shuruaat karne ke liye mahatvapurn hai.
