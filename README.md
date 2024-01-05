@@ -26,7 +26,7 @@
 ### Basic Concepts of OOP
 
 1. **Classes and Objects:**
-   - **Classes:** Define the structure and behavior of objects. Think of it as a blueprint for creating objects.
+   - **Classes:** Define the structure and behaviour of objects. Think of it as a blueprint for creating objects.
    - **Objects:** Instances of classes. They encapsulate data and functions that manipulate data.
 
 2. **Inheritance:**
@@ -55,18 +55,18 @@
 
 ### Comparison between C and C++
 
-1. **C Programming Language:**
-   - A structured, procedural programming language. Known for its simplicity, efficiency, and control over system resources.
-   - Lacks support for objects and classes.
-   - Widely used in system programming, embedded systems, and applications requiring direct hardware manipulation.
+| Aspect                           | C Programming Language                                  | C++ Programming Language                                |
+|----------------------------------|---------------------------------------------------------|---------------------------------------------------------|
+| Programming Paradigm             | Structured, Procedural                                  | Supports both Procedural and Object-Oriented            |
+| Simplicity                       | Known for its simplicity                                | Incorporates OOP features                                |
+| Control Over System Resources    | Provides direct control over system resources           | Provides control but also abstracts some complexity     |
+| Support for Objects and Classes  | Lacks support for objects and classes                   | Introduces concepts like classes, objects, inheritance  |
+|                                  |                                                         | polymorphism, and encapsulation                         |
+| Common Use Cases                 | System Programming, Embedded Systems, Direct Hardware  | High-performance software, Game Development, Real-time  |
+|                                  | Manipulation                                            | Simulation                                              |
 
-2. **C++ Programming Language:**
-   - An extension of C that incorporates OOP features. It supports both procedural and object-oriented programming paradigms.
-   - Introduces concepts like classes, objects, inheritance, polymorphism, and encapsulation.
-   - Ideal for developing high-performance software, game development, and real-time simulation.
+This table summarizes the key differences between C and C++ based on the provided information. It highlights their programming paradigms, simplicity, control over system resources, support for objects and classes, and common use cases..
 
-
-Let's dive into these C++ concepts with detailed explanations. This should provide a comprehensive understanding, suitable for academic or programming purposes.
 
 ### Stream-Based I/O
 
