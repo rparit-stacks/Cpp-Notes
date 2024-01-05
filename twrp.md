@@ -308,3 +308,144 @@ Yahan ek diagram diya gaya hai jo inheritance ke kuch types ko represent karta h
 ```
 
 Is diagram mein `Person` ek base class hai, `Student` aur `Teacher` derived classes hain jo `Person` class se inherit hoti hain, aur `Engineer` ek aur derived class hai jo `Student` class se inherit hoti hai.
+
+**Polymorphism:**
+
+**Types of Polymorphism:**
+1. **Compile-time Polymorphism (Static Binding):** Ismein function overloading aur operator overloading ka use hota hai. Function calls compile-time par resolve hote hain.
+2. **Run-time Polymorphism (Dynamic Binding):** Ismein function overriding ka use hota hai. Function calls run-time par resolve hote hain. Yeh virtual functions ke through achieve hota hai.
+
+**Early vs. Late Binding:**
+- **Early Binding:** Compile-time par function calls resolve hote hain. Ismein static binding hoti hai.
+- **Late Binding:** Run-time par function calls resolve hote hain. Ismein dynamic binding hoti hai.
+
+**Virtual Functions:**
+- Virtual functions tab use hoti hain jab aap base class ke pointer/reference se derived class ke functions ko call karna chahte hain.
+- Yeh base class mein declare hoti hain `virtual` keyword ke sath aur derived class mein override hoti hain.
+- Yeh run-time polymorphism ko possible banati hain.
+
+**Example with Diagram:**
+Consider a scenario where we have a base class `Shape` and two derived classes `Circle` and `Rectangle`. `Shape` has a virtual function `area()`. Here's a simple diagram:
+
+```
+        Shape
+        /    \
+    Circle  Rectangle
+```
+
+```cpp
+class Shape {
+public:
+    virtual double area() { return 0; }
+};
+
+class Circle : public Shape {
+private:
+    double radius;
+
+public:
+    Circle(double r) : radius(r) {}
+    double area() override {
+        return 3.14159 * radius * radius;
+    }
+};
+
+class Rectangle : public Shape {
+private:
+    double length;
+    double width;
+
+public:
+    Rectangle(double l, double w) : length(l), width(w) {}
+    double area() override {
+        return length * width;
+    }
+};
+```
+
+**Pointer to Derived Class Objects:**
+```cpp
+Shape* shape1 = new Circle(5.0);
+Shape* shape2 = new Rectangle(4.0, 6.0);
+
+double area1 = shape1->area(); // Calls Circle's area()
+double area2 = shape2->area(); // Calls Rectangle's area()
+```
+
+**Pure Virtual Functions & Abstract Classes:**
+- Pure virtual functions are declared in base classes but have no implementation.
+- A class containing pure virtual functions is called an abstract class.
+- Abstract classes cannot be instantiated; they are meant to be inherited from and their pure virtual functions must be implemented in derived classes.
+
+**Operator Overloading:**
+
+**Overloading Unary Operators:**
+```cpp
+class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    Complex(double r, double i) : real(r), imag(i) {}
+    Complex operator-() {
+        return Complex(-real, -imag);
+    }
+};
+```
+
+**Nameless Objects:**
+```cpp
+Complex c1(3.0, 4.0);
+Complex c2 = -c1; // Using unary operator overloading
+```
+
+**Overloading Binary Operators:**
+```cpp
+class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    Complex(double r, double i) : real(r), imag(i) {}
+    Complex operator+(const Complex& other) {
+        return Complex(real + other.real, imag + other.imag);
+    }
+};
+```
+
+**Overloading with Friend Functions:**
+```cpp
+class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    Complex(double r, double i) : real(r), imag(i) {}
+    friend Complex operator+(const Complex& a, const Complex& b) {
+        return Complex(a.real + b.real, a.imag + b.imag);
+    }
+};
+```
+
+**Conversion Between Basic Types and User-Defined Types:**
+You can overload casting operators to allow conversion between user-defined types and basic types.
+
+```cpp
+class Distance {
+private:
+    int feet;
+    float inches;
+
+public:
+    Distance() : feet(0), inches(0.0) {}
+    Distance(int f, float in) : feet(f), inches(in) {}
+    operator float() const {
+        return feet + (inches / 12.0);
+    }
+};
+```
+
+These are some examples and explanations of polymorphism, operator overloading, and related concepts in C++.
