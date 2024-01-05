@@ -361,3 +361,165 @@ Let's delve into the concepts of constructors and destructors in C++.
      ```
 
 These concepts of constructors and destructors are fundamental in C++ and play a crucial role in object initialization, memory management, and object lifetime management. Understanding them is essential for effective C++ programming.
+
+Let's explore the concept of inheritance in C++ in detail, covering various aspects such as types of inheritance, access specifiers, ambiguity resolution, aggregation vs. composition, virtual base class, and constructors/destructors in derived classes.
+
+### Types of Inheritance
+
+1. **Single Inheritance:**
+   - A derived class inherits from a single base class.
+   - Example: `class DerivedClass : public BaseClass`.
+
+2. **Multiple Inheritance:**
+   - A derived class inherits from multiple base classes.
+   - Example: `class DerivedClass : public BaseClass1, public BaseClass2`.
+
+3. **Multilevel Inheritance:**
+   - A derived class is derived from another derived class.
+   - Example: `class DerivedClass1 : public BaseClass`, `class DerivedClass2 : public DerivedClass1`.
+
+4. **Hierarchical Inheritance:**
+   - Multiple derived classes inherit from a single base class.
+   - Example: `class BaseClass`, `class DerivedClass1 : public BaseClass`, `class DerivedClass2 : public BaseClass`.
+
+5. **Hybrid Inheritance:**
+   - A combination of two or more types of inheritance.
+
+### Derivation - Public, Private, & Protected
+
+1. **Public Inheritance:**
+   - Inherited public members of the base class remain public in the derived class.
+   - Inherited protected members of the base class remain protected in the derived class.
+
+2. **Private Inheritance:**
+   - Inherited public and protected members of the base class become private in the derived class.
+
+3. **Protected Inheritance:**
+   - Inherited public and protected members of the base class become protected in the derived class.
+
+### Ambiguity Resolution (Function Overriding)
+
+1. **Ambiguity Resolution:**
+   - Occurs when a derived class inherits multiple base classes with the same function name and signature.
+   - Resolution involves specifying which base class function should be used.
+
+### Aggregation vs. Composition
+
+1. **Aggregation:**
+   - Represents a "has-a" relationship, where one class contains another class as a part.
+   - Objects can exist independently.
+   - Example: A car has an engine.
+
+2. **Composition:**
+   - Represents a "whole-part" relationship, where one class is composed of another class.
+   - Objects cannot exist independently.
+   - Example: A house is composed of rooms.
+
+### Virtual Base Class
+
+1. **Virtual Base Class:**
+   - Used to avoid multiple instances of a base class when multiple inheritance is involved.
+   - Ensures only one copy of the base class in the derived class hierarchy.
+
+### Constructor and Destructor in Derived Classes
+
+1. **Constructor in Derived Classes:**
+   - Derived classes can have their own constructors.
+   - Base class constructors can be called explicitly in derived class constructors using the base class's name.
+   - Example:
+     ```cpp
+     class Derived : public Base {
+         public:
+             Derived(int x) : Base(x) {
+                 // Derived class constructor code here
+             }
+     };
+     ```
+
+2. **Destructor in Derived Classes:**
+   - Derived classes can have their own destructors.
+   - Base class destructors are automatically called by the derived class destructor.
+   - Example:
+     ```cpp
+     class Derived : public Base {
+         public:
+             ~Derived() {
+                 // Derived class destructor code here
+             }
+     };
+     ```
+
+Understanding inheritance and its various forms is essential for building complex class hierarchies and achieving code reusability in C++. It plays a vital role in object-oriented programming.
+
+Certainly, let's explore the concept of inheritance in C++ in detail, covering various aspects as you requested.
+
+### Types of Inheritance
+
+1. **Single Inheritance:**
+   - A derived class inherits from a single base class.
+   - Example: `class DerivedClass : public BaseClass`.
+
+2. **Multiple Inheritance:**
+   - A derived class inherits from multiple base classes.
+   - Example: `class DerivedClass : public BaseClass1, public BaseClass2`.
+
+3. **Multilevel Inheritance:**
+   - A derived class is derived from another derived class.
+   - Example: `class DerivedClass1 : public BaseClass`, `class DerivedClass2 : public DerivedClass1`.
+
+4. **Hierarchical Inheritance:**
+   - Multiple derived classes inherit from a single base class.
+   - Example: `class BaseClass`, `class DerivedClass1 : public BaseClass`, `class DerivedClass2 : public BaseClass`.
+
+5. **Hybrid Inheritance:**
+   - A combination of two or more types of inheritance.
+
+### Derivation - Public, Private, & Protected
+
+1. **Public Inheritance:**
+   - Inherited public members of the base class remain public in the derived class.
+   - Inherited protected members of the base class remain protected in the derived class.
+
+2. **Private Inheritance:**
+   - Inherited public and protected members of the base class become private in the derived class.
+
+3. **Protected Inheritance:**
+   - Inherited public and protected members of the base class become protected in the derived class.
+
+### Ambiguity Resolution (Function Overriding)
+
+1. **Ambiguity Resolution:**
+   - Occurs when a derived class inherits multiple base classes with the same function name and signature.
+   - Resolution involves specifying which base class function should be used.
+   - Can be resolved using scope resolution operator (`::`) or by making one of the functions virtual.
+
+### Aggregation vs. Composition
+
+1. **Aggregation:**
+   - Represents a "has-a" relationship, where one class contains another class as a part.
+   - Objects can exist independently.
+   - Example: A car has an engine.
+
+2. **Composition:**
+   - Represents a "whole-part" relationship, where one class is composed of another class.
+   - Objects cannot exist independently.
+   - Example: A house is composed of rooms.
+
+### Virtual Base Class
+
+1. **Virtual Base Class:**
+   - Used to avoid multiple instances of a base class when multiple inheritance is involved.
+   - Ensures only one copy of the base class in the derived class hierarchy.
+   - Prevents the "diamond problem" in multiple inheritance.
+
+### Constructor and Destructor in Derived Classes
+
+1. **Constructor in Derived Classes:**
+   - Derived classes can have their own constructors.
+   - Base class constructors can be called explicitly in derived class constructors using the base class's name.
+
+2. **Destructor in Derived Classes:**
+   - Derived classes can have their own destructors.
+   - Base class destructors are automatically called by the derived class destructor.
+
+Understanding these concepts of inheritance is crucial for building complex class hierarchies and achieving code reusability in C++. It plays a vital role in object-oriented programming.
