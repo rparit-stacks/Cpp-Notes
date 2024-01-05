@@ -263,3 +263,48 @@ public:
 ```
 
 Constructors aur destructors C++ mein class ke objects ke creation aur destruction ke process ko control karne mein madad karte hain.
+
+**Inheritance:**
+
+Inheritance ek important concept hai C++ programming mein, jisme ek class dusri class ke properties aur methods ko inherit karti hai. Yeh ek parent-child relationship ko represent karta hai. Inheritance se code reusability aur hierarchies create karne mein madad milti hai. Niche main kuch important concepts aur types of inheritance explain karunga:
+
+**Types of Inheritance:**
+1. **Single Inheritance:** Ek child class ek hi parent class se inherit hoti hai.
+2. **Multiple Inheritance:** Ek child class do ya do se adhik parent classes se inherit hoti hai.
+3. **Multilevel Inheritance:** Ek class dusri class se inherit hoti hai, phir dusri class se tisri class inherit hoti hai, aur aise hi chalti rahti hai.
+4. **Hierarchical Inheritance:** Ek class multiple child classes ko inherit karti hai.
+5. **Hybrid Inheritance:** Yeh ek combination hota hai multiple, multilevel, ya hierarchical inheritance ke.
+
+**Derivation - Public, Private & Protected:**
+- **Public Inheritance:** Public inheritance mein, public members parent class se child class mein public members ke roop mein inherit hote hain, private members child class mein access nahi ho sakte.
+- **Private Inheritance:** Private inheritance mein, parent class ke public aur protected members child class mein private members ke roop mein inherit hote hain, aur unko child class ke bahar access nahi kiya ja sakta.
+- **Protected Inheritance:** Protected inheritance mein, parent class ke public aur protected members child class mein protected members ke roop mein inherit hote hain, aur unko child class ke bahar access nahi kiya ja sakta.
+
+**Ambiguity Resolution (Function Overriding):**
+Agar ek child class mein do parent classes se aane wale members ke naam ya data type mein conflict hota hai, toh ambiguity resolution ki zaroorat hoti hai. Isme `virtual` keyword aur function overriding ka use kiya jata hai.
+
+**Aggregation:**
+Aggregation ek relationship hota hai jahan ek class dusri class ke objects ko "has-a" relationship ke roop mein use karti hai. Isme ek class dusri class ke objects ko reference karta hai. Example, ek University class ek Department class ke objects ko reference kar sakta hai.
+
+**Composition vs Classification:**
+Composition ek relationship hota hai jahan ek class dusri class ke objects ko "owns" relationship ke roop mein use karti hai. Isme ek class dusri class ke objects ko khud ke part ke roop mein rakhti hai. Classification mein ek class dusri class ko inherit karti hai.
+
+**Virtual Base Class:**
+Virtual base class ka use multiple inheritance ke case mein hota hai. Jab ek class do se adhik classes se inherit hoti hai aur un dono classes mein ek common base class hai, toh yeh ambiguity ko resolve karne mein madadgar hoti hai.
+
+**Constructor and Destructor in Derived Classes:**
+- Derived class ke constructor mein base class ke constructor ko call karna important hota hai. Isse base class ke members initialize hote hain.
+- Destructor bhi derived class ke destructor mein base class ke destructor ko call karna chahiye taki resources properly deallocate ho sake.
+
+Yahan ek diagram diya gaya hai jo inheritance ke kuch types ko represent karta hai:
+
+```
+       Person
+         /  \
+        /    \
+   Student   Teacher
+      |
+   Engineer
+```
+
+Is diagram mein `Person` ek base class hai, `Student` aur `Teacher` derived classes hain jo `Person` class se inherit hoti hain, aur `Engineer` ek aur derived class hai jo `Student` class se inherit hoti hai.
