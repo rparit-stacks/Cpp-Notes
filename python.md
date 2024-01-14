@@ -205,3 +205,104 @@ words = ["hello", "world", "python"]
   ```
 
 These methods are some of the most commonly used for manipulating and querying strings in Python. They are particularly useful because strings are one of the most frequently used data types in programming.
+
+Sure, let's go over some important dictionary methods in Python. Dictionaries are key-value pairs and are widely used in Python for storing and accessing data. Here are some of the common dictionary methods with explanations and examples:
+
+### 1. `get()`
+- **Definition**: Returns the value for a specified key if the key is in the dictionary.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  age = student.get("age")
+  print(age)  # Output: 25
+  ```
+
+### 2. `keys()`
+- **Definition**: Returns a view object that displays a list of all the keys in the dictionary.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  keys = student.keys()
+  print(keys)  # Output: dict_keys(['name', 'age'])
+  ```
+
+### 3. `values()`
+- **Definition**: Returns a view object that displays a list of all the values in the dictionary.
+- **Example**:
+  ```python
+
+
+  student = {"name": "John", "age": 25}
+  values = student.values()
+  print(values)  # Output: dict_values(['John', 25])
+  ```
+
+### 4. `items()`
+- **Definition**: Returns a view object that contains the key-value pairs of the dictionary, as tuples in a list.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  items = student.items()
+  print(items)  # Output: dict_items([('name', 'John'), ('age', 25)])
+  ```
+
+### 5. `update()`
+- **Definition**: Updates the dictionary with the specified key-value pairs.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  student.update({"age": 26, "grade": "A"})
+  print(student)  # Output: {'name': 'John', 'age': 26, 'grade': 'A'}
+  ```
+
+### 6. `pop()`
+- **Definition**: Removes the element with the specified key.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  age = student.pop("age")
+  print(student)  # Output: {'name': 'John'}
+  print(age)      # Output: 25
+  ```
+
+### 7. `popitem()`
+- **Definition**: Removes the last inserted key-value pair.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25, "grade": "A"}
+  item = student.popitem()
+  print(student)  # Output: {'name': 'John', 'age': 25}
+  print(item)    
+
+# Output: ('grade', 'A')
+  ```
+
+### 8. `clear()`
+- **Definition**: Removes all items from the dictionary.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  student.clear()
+  print(student)  # Output: {}
+  ```
+
+### 9. `setdefault()`
+- **Definition**: Returns the value of a specified key. If the key does not exist, it inserts the key with a specified value.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  grade = student.setdefault("grade", "A")
+  print(student)  # Output: {'name': 'John', 'age': 25, 'grade': 'A'}
+  print(grade)    # Output: "A"
+  ```
+
+### 10. `copy()`
+- **Definition**: Returns a shallow copy of the dictionary.
+- **Example**:
+  ```python
+  student = {"name": "John", "age": 25}
+  student_copy = student.copy()
+  print(student_copy)  # Output: {'name': 'John', 'age': 25}
+  ```
+
+These methods are essential for working with dictionaries in Python. They allow you to effectively manipulate and access the data stored in dictionary structures, which are common and powerful tools for organizing and handling data in Python.
